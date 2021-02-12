@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Movie from "./components/Movie";
-import searchMovieApi from "./Api/index";
+import {searchMovies} from "./Api/index";
 
 const App = function App() {
   const [state, setState] = useState({
     movieTitle: "",
     loaded: false,
   });
-  const [movie, setMovie] = useState({
-    movieData:''
-  });
+  const [movies, setMovies] = useState([]);
+
   const handleChange = (event) => {
     setState({
       ...state,
@@ -19,17 +18,14 @@ const App = function App() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (state.movieTitle.trim() === "") {
+    if (state.movieTitle.trim().length < 3) {
       alert("Please type movie title");
       return
     }
     const { movieTitle } = state;
-    searchMovieApi(movieTitle).then((data) => {
-      if (data) {
-        setMovie({
-          movieData:data
-        });
-      }
+      searchMovies(movieTitle)
+      .then((movies) => {
+        setMovies(movies);
     });
   };
   return (
@@ -43,15 +39,22 @@ const App = function App() {
           onChange={handleChange}
         ></input>
         <button>search movie</button>
-        {movie.movieData ? (
-          <Movie
-            title={movie.movieData.Title}
-            year={movie.movieData.Year}
-            director={movie.movieData.Director}
-            awards={movie.movieData.Awards}
-          />
-        ) : null}
       </form>
+      <div className="moviesContainer">
+        {movies.length > 0 ? (
+                  movies.map((movie, index) =>{
+                    return (
+                      <Movie
+                        key={index}
+                        title={movie.Title}
+                        year={movie.Year}
+                        director={movie.Director}
+                        awards={movie.Awards}
+                        image={movie.Poster}/>
+                        )
+                  })
+          ) : null}
+      </div>
     </div>
   );
 };
