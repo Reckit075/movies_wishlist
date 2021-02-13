@@ -1,61 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Movie from "./components/Movie";
-import {searchMovies} from "./Api/index";
+import HomePage from "./pages/home";
+import SearchPage from "./pages/search";
+import WishListPage from "./pages/wishlist";
 
 const App = function App() {
-  const [state, setState] = useState({
-    movieTitle: "",
-    loaded: false,
-  });
-  const [movies, setMovies] = useState([]);
-
-  const handleChange = (event) => {
-    setState({
-      ...state,
-      [event.target.name]: event.target.value,
-    });
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (state.movieTitle.trim().length < 3) {
-      alert("Please type movie title");
-      return
-    }
-    const { movieTitle } = state;
-      searchMovies(movieTitle)
-      .then((movies) => {
-        setMovies(movies);
-    });
-  };
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="write movie's title"
-          name="movieTitle"
-          value={state.movieTitle}
-          onChange={handleChange}
-        ></input>
-        <button>search movie</button>
-      </form>
-      <div className="moviesContainer">
-        {movies.length > 0 ? (
-                  movies.map((movie, index) =>{
-                    return (
-                      <Movie
-                        key={index}
-                        title={movie.Title}
-                        year={movie.Year}
-                        director={movie.Director}
-                        awards={movie.Awards}
-                        image={movie.Poster}/>
-                        )
-                  })
-          ) : null}
-      </div>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/search" component={SearchPage} />
+        <Route path="/wishlist" component={WishListPage} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 
