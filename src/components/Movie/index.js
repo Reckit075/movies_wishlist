@@ -28,7 +28,7 @@ const Movie = ({imdbID, title, year, director, awards, image }) => {
     <div className="cardWrapper">
       <Card
         style={{ width: "18rem" }}
-        bg="dark"
+        bg="secondary"
         border="light"
         text="light"
         className="card"

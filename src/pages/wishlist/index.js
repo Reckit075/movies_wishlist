@@ -13,24 +13,6 @@ const WishListPage = () => {
   })
   setLoaded(true)
 }
-//   let getData = async function () {
-//     let res = await getMoviesToWishList(moviesOnWishList);
-//     let moviesArr = [];
-//     await res.map((element, index) => {
-//       if (moviesOnWishList.length + 1) {
-//         element.then((el) => {
-//           moviesArr.push(el);
-//         });
-//         setMovies(moviesArr);
-//         console.log(movies)
-//       } else {
-//         element.then((el) => {
-//           moviesArr.push(el);
-//         });
-//       }
-//     });
-//     setLoaded(true)
-//   }
   useEffect(() => {
     getData(moviesOnWishList);
   }, []);

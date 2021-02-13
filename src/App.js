@@ -4,6 +4,7 @@ import "./App.css";
 import HomePage from "./pages/home";
 import SearchPage from "./pages/search";
 import WishListPage from "./pages/wishlist";
+import NotFoundPage from './pages/NotFoundPage/'
 
 const App = function App() {
   return (
@@ -12,6 +13,7 @@ const App = function App() {
         <Route path="/" exact component={HomePage} />
         <Route path="/search" component={SearchPage} />
         <Route path="/wishlist" component={WishListPage} />
+        <Route component={NotFoundPage} />
       </Switch>
     </BrowserRouter>
   );

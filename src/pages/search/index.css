@@ -8,3 +8,33 @@
   justify-content: center;
   margin: 1%;
 }
+.form {
+  margin-top: 40vh;
+}
+.formAfter {
+  margin-top: 10vh;
+}
+.searchBar {
+  width: 20%;
+  margin-right: 2%;
+  background-color: #140808;
+  border: 1px solid #140808;
+  border-bottom: 2px solid rgb(136, 136, 138);
+  font-size: 25px;
+  color: rgb(136, 136, 138);
+}
+.searchBar:focus {
+  outline: none;
+}
+.form > button,
+.formAfter > button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #140808;
+  border: 2px solid rgb(136, 136, 138);
+}
+.form > button:hover,
+.formAfter > button:hover {
+  background-color: rgb(136, 136, 138);
+}
