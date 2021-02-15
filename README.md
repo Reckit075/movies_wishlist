@@ -21,3 +21,7 @@ Project is created with:
 - react-router version: 5.2.0
 - react-bootstrap version: 1.4.0
 - node-sass version: 5.0.0
+
+##things to do
+- change movie_info
+- change view on mobile devices
