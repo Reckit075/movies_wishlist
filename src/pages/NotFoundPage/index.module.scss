@@ -1,0 +1,20 @@
+.img {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    border-radius: 15px;
+}
+.btnBack {
+    background-color: #aaaee3;
+    border: 2px solid #444996;
+    border-radius: 10px;
+    padding: 5px;
+    color: #272a57;
+    position: fixed;
+    left: 2%;
+    top: 2%;
+    font-weight: bold;
+}
+.btnBack:hover {
+    background-color: #7e81a8;
+}

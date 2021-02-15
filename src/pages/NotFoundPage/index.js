@@ -1,9 +1,16 @@
-import React from 'react'
-import './index.css'
-const NotFoundPage = () => {
-return(
-    <h1 className="text">404 Page not found 😕</h1>
-)
-}
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./index.module.scss";
 
-export default NotFoundPage
+const NotFoundPage = () => {
+  return (
+    <>
+      <Link to="/">
+        <p className={styles.btnBack}>⬅ back to the home page</p>
+      </Link>
+      <img src="./gfx/404.png" className={styles.img} alt="404" />
+    </>
+  );
+};
+
+export default NotFoundPage;

@@ -1,0 +1,100 @@
+  .app {
+    text-align: center;
+    background-color: #22254b;
+  }
+
+  .moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    margin: 1%;
+  }
+  
+  .form {
+    margin-top: 10vh;
+  }
+  
+  .btnWishlist{
+    background-color:  #d1cf8b;
+    border: 2px solid #272A57;
+    border-radius: 10px;
+    padding: 5px 15px 5px 15px;
+    color: #272A57;
+    position: fixed;
+    right: 5%;
+    top: 5%
+  }
+
+  .btnWishlist:hover{
+    background-color: #e2de58;
+  }
+
+  .searchBar {
+    color: #171933;
+    width: 30%;
+    background-color:#6068D6;
+    border: 3px solid #171933;
+    border-radius: 15px;
+    font-size: 25px;
+  }
+
+  ::placeholder {
+    color: #171933;
+    opacity: 0.5;
+  }
+
+  .searchBar:focus {
+    color: #171933;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+  }
+
+  .form > button,
+  .formAfter > button {
+    width: 5%;
+    height: 5%;
+    background-color: #22254b;
+    font-size: 2vw;
+    border: none;
+    transition: all .2s ease-in-out;
+    margin-left: 5px;
+  }
+
+  .form > button:hover,
+  .formAfter > button:hover {
+    transform: scale(1.2);
+  }
+
+  .textNotFound{
+    color: white;
+    font-size: 40px;
+  }
+
+  .spinnerContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .notFoundText{
+    color: white;
+    font-size: 40px;
+  }
+
+  .alertsContainer{
+    margin: auto;
+    width: 50%;
+  }
+
+  .btnLoadMore{
+    margin: 20px 0 40px 0 ;
+    background-color: #444996;
+    border: 3px solid#171933;
+    border-radius: 10px;
+  }
+  .btnLoadMore:hover{
+    background-color: #7E81A8;
+    border-color: #171933;
+  }
