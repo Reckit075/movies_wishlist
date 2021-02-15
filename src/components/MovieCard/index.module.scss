@@ -1,0 +1,71 @@
+.cardWrapper {
+  flex-grow: 4;
+  margin-left: 2%;
+  margin-top: 2%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  height: 70vh;
+  width: 20rem;
+  background-color: #444996;
+  border-radius: 2%;
+  border: 5px solid #171933;
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.movieInfo{
+  background-color: white;
+  opacity: 2;
+  color: black;
+  padding: 2rem;
+  position: absolute;
+  text-align: center;
+  height: 48vh;
+  border-top:2px solid#171933; 
+  overflow: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-350%);
+  transition: transform 0.6s ease-in;
+}
+
+.card:hover > .movieInfo{
+  transform: translateY(-43%);
+  opacity: 2;
+}
+
+.btn {
+  background-color: #272A57;
+  border: 2px solid #23264e;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  align-self: center;
+  color: #d1cf8b;
+  border-radius: 8%;
+}
+
+.btn:hover{
+  background-color:  #d1cf8b;
+  border-color: #272A57;
+  color: #272A57;
+}
+.cardImgContainer{
+  overflow: hidden;
+  border-bottom: 4px solid #171933;
+}
+.cardImg{
+  opacity: 0.7;
+  height: 48vh;
+}
+.cardImg:hover{
+opacity: 1;
+transform: scale(1.1);
+transition: ease-in-out (0.6s);
+}

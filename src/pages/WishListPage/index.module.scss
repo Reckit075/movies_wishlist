@@ -1,0 +1,42 @@
+.moviesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+    color: #D9D450;
+    margin: 0;
+    padding: 10px;
+    background-color: #171933;
+    border-bottom: 4px solid #444996;
+}
+
+.btnBack{
+    background-color:  #AAAEE3;
+    border: 2px solid #444996;
+    border-radius: 10px;
+    padding: 5px;
+    color: #272A57;
+    position: fixed;
+    left: 2%;
+    top: 2%;
+    font-weight: bold;
+}
+
+.btnBack:hover{
+    background-color: #7E81A8;
+}
+
+.infoText{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
