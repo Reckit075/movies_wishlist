@@ -26,3 +26,4 @@ Project is created with:
 ## Things to do
 - change movie_info
 - change view on mobile devices
+- add alert after adding movie to wishlist
