@@ -1,5 +1,5 @@
 const apikey = "af069944";
-const FETURED_API = "http://www.omdbapi.com/?apikey=" + apikey;
+const FETURED_API = "https://www.omdbapi.com/?apikey=" + apikey;
 
 export const getMovieByTitle = (title) => {
   const url = `${FETURED_API}&s=${title}`;
