@@ -10,8 +10,8 @@ Simple application to save your favourite movies.
 ## Setup
 In the project directory, you can run:
 ```
-$ npm install
-$ npm start
+$ npm install or yarn install
+$ npm start   or yarn start
 ```
 
 ## Technologies
