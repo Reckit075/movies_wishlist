@@ -4,6 +4,7 @@ You can run this app on this link -> https://frosty-yalow-05ee6a.netlify.app/
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Things to do](#things-to-do)
 
 ## General info
 Simple application to save your favourite movies.
@@ -22,6 +23,6 @@ Project is created with:
 - react-bootstrap version: 1.4.0
 - node-sass version: 5.0.0
 
-##things to do
+## Things to do
 - change movie_info
 - change view on mobile devices
