@@ -1,4 +1,5 @@
 # movies wishlist
+You can run this app on this link -> https://frosty-yalow-05ee6a.netlify.app/
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
